@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="product_review_reminder" label="Product Review Reminder" file="product_review_reminder.html" type="html" module="Review_Reminder" area="frontend"/>
+</config>
+<!-- here you define your email template and its template location path-->
