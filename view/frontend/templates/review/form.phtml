@@ -140,7 +140,7 @@ $rating = $_GET['rating'];
 		require(['jquery', 'jquery/ui'], function($){
 		  jQuery(document).ready( function() {
 				var rating = "<?php echo $rating ?>";
-				jQuery("#Rating_"+rating+"_label").click();
+				jQuery("#Produktbetyg"+rating+"_label").click();
 			
 		  });
 		});
