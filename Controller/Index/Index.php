@@ -79,7 +79,7 @@ class Index extends \Magento\Framework\App\Action\Action
 			$logger->addWriter($writer);
 			$x = $this->scopeConfig->getValue(self::XML_PATH_REMINDER_DAYS, $storeScope);
 			
-			$x = 4; //number of days in the past
+			//$x = 4; //number of days in the past
 
 			$past_stamp = time() - $x*24*60*60;
 
