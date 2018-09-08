@@ -12,7 +12,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-		"magento/module-catalog": "^1.0.0"
+		"magento/module-catalog": "^1.1.0"
 	},
     "autoload": {
         "files": [
