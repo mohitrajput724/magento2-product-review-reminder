@@ -19,8 +19,8 @@ $customer_email = $order->getCustomerEmail();
 $customer_id = $order->getCustomerId();
 $customer_firstname = $order->getCustomerFirstname(); 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$imagewidth=130;
-$imageheight=130;
+$imagewidth=180;
+$imageheight=180;
 $imageHelper  = $objectManager->get('\Magento\Catalog\Helper\Image');
 $encryptor  = $objectManager->get('Magento\Framework\Encryption\EncryptorInterface');
 $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
@@ -79,7 +79,7 @@ foreach ($items as $item) {
 </table>
 <table width="400">
 <h2 style="font-size:16px;font-weight:600;text-transform:uppercase;line-height:23px">Please share your feedback with us</h2>
-							<p>Based on your experience with the product above, how likely are you to recommend <span class="il">Myntra</span> to a friend or colleague? 
+							<p>Based on your experience with the product above, how likely are you to recommend <span class="il">faltbutiken</span> to a friend or colleague? 
 							</p>
 							<br/>
 							<br/>

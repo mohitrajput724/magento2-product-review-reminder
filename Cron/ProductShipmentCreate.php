@@ -34,6 +34,7 @@ class ProductShipmentCreate
 	protected $resultJsonFactory;
 	
 	const XML_PATH_REMINDER_DAYS = 'review/general/reminder_days';
+	const XML_PATH_REMINDER_STATUS = 'review/general/enable';
 
 	public function __construct(
 		
