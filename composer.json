@@ -2,11 +2,12 @@
     "name": "review/module-reminder",
     "description": "Product Review Reminder Module",
     "type": "magento2-module",
+	"version": "1.0.0",
     "license": "proprietary",
     "authors": [
         {
             "email": "mohitrajput724@gmail.com",
-            "name": "Mage2Gen"
+            "name": "Mohit Chauhan"
         }
     ],
     "minimum-stability": "dev",
@@ -19,4 +20,5 @@
             "Review\\Reminder\\": ""
         }
     }
+	"minimum-stability": "dev"
 }
