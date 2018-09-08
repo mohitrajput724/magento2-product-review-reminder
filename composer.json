@@ -2,7 +2,7 @@
     "name": "review/module-reminder",
     "description": "Product Review Reminder Module",
     "type": "magento2-module",
-	"version": "1.0.0",
+	"version": "1.0.1",
     "license": "proprietary",
     "authors": [
         {
