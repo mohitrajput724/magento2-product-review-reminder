@@ -19,6 +19,6 @@
         "psr-4": {
             "Review\\Reminder\\": ""
         }
-    }
+    },
 	"minimum-stability": "dev"
 }
