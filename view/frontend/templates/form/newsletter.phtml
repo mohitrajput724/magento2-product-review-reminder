@@ -12,7 +12,12 @@ $customerSession = $om->get('Magento\Customer\Model\Session');
 $CustomerRepositoryInterface = $om->get('Magento\Customer\Api\CustomerRepositoryInterface');
 $customer_id = $customerSession->getCustomer()->getId();
 $customer = $CustomerRepositoryInterface->getById($customer_id);
-$enable_subscription =  $customer->getCustomAttribute('review_reminder')->getValue();
+$enable_subscription =  $customer->getCustomAttribute('review_reminder');
+if($enable_subscription){
+$enable_subscription =  $enable_subscription->getValue();
+}else{
+    $enable_subscription = "";
+}
 
 ?>
 <?= $block->getChildHtml('form_before') ?>

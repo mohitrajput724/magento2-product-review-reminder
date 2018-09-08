@@ -13,7 +13,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="custom_group">
         <job name="product_review_reminder_setup_job" instance="Review\Reminder\Cron\ProductShipmentCreate" method="execute">
-             <schedule>0 22 * * *</schedule>
+             <schedule>0 21 * * *</schedule>
         </job>
     </group>
 </config>

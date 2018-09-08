@@ -57,15 +57,15 @@ $this->_url = $url;
 			$customerBeforeAuthUrl = $this->_url->getUrl('/home/');
 			
 			
-			 $resultRedirect = $this->responseFactory->create();
-			 $resultRedirect->setRedirect($customerBeforeAuthUrl)->sendResponse();
+			$resultRedirect = $this->resultRedirectFactory->create();
+				$resultRedirect->setPath('/home/');
+				return $resultRedirect;
 			
 		}
 		
 		catch (\Exception $e) {
 						
-						print_r( $e->getmessage());
-						die();
+						
 						$this->_messageManager->addError(__('We can\'t unsubscribe from review right now.'));
 						$resultRedirect = $this->resultRedirectFactory->create();
 						$resultRedirect->setPath('*/*/');
