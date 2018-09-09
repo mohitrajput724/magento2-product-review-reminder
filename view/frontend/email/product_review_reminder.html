@@ -1,0 +1,12 @@
+<!--@subject Product Review Reminder  @-->
+
+ 
+{{template config_path="design/email/header_template"}} <!-- pathe of template header-->
+ 
+<table>   
+
+ {{block class='Magento\\Framework\\View\\Element\\Template' area='frontend' template='Review_Reminder::email_items.phtml' items=$items order=$order}}
+   
+</table>
+ 
+{{template config_path="design/email/footer_template"}} <!--footer of template-->
