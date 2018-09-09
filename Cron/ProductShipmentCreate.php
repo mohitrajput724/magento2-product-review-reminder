@@ -84,7 +84,7 @@ class ProductShipmentCreate
                 );
 		
 			if($status == 1){
-        			$x = 0; //number of days in the past       
+        			//$x = 0; //number of days in the past       
         			$past_stamp = time() - $x*24*60*60;
         
         			$past_date = date('Y-m-d', $past_stamp);
