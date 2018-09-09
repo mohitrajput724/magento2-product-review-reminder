@@ -82,6 +82,15 @@ class ProductShipmentCreate
                     self::XML_PATH_REMINDER_TEMPLATE,
                     $storeScope
                 );
+                
+             $senderEmail =   $this->scopeConfig->getValue(
+                    'trans_email/ident_sales/email',
+                    $storeScope
+                );    
+               $senderName = $this->scopeConfig->getValue(
+                    'trans_email/ident_sales/name',
+                     $storeScope
+                );
 		
 			if($status == 1){
         			//$x = 0; //number of days in the past       
@@ -123,8 +132,8 @@ class ProductShipmentCreate
         						    
         					
         							$items = $shipment->getItemsCollection();
-        							$senderInfo['email'] = "sales@example.com";
-        							$senderInfo['name'] = 'Sales';
+        							$senderInfo['email'] = $senderEmail;
+        							$senderInfo['name'] = $senderName;
         							$this->inlineTranslation->suspend();
         							$_transportBuilder = $this->_transportBuilder;
         							$_transportBuilder->clearFrom();

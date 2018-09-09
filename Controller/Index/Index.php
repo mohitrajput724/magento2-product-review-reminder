@@ -83,9 +83,18 @@ class Index extends \Magento\Framework\App\Action\Action
                     self::XML_PATH_REMINDER_TEMPLATE,
                     $storeScope
                 );
+                
+             $senderEmail =   $this->scopeConfig->getValue(
+                    'trans_email/ident_sales/email',
+                    $storeScope
+                );    
+               $senderName = $this->scopeConfig->getValue(
+                    'trans_email/ident_sales/name',
+                     $storeScope
+                );
 		
 			if($status == 1){
-        			$x = 0; //number of days in the past       
+        			//$x = 0; //number of days in the past       
         			$past_stamp = time() - $x*24*60*60;
         
         			$past_date = date('Y-m-d', $past_stamp);
@@ -124,8 +133,8 @@ class Index extends \Magento\Framework\App\Action\Action
         						    
         					
         							$items = $shipment->getItemsCollection();
-        							$senderInfo['email'] = "sales@example.com";
-        							$senderInfo['name'] = 'Sales';
+        							$senderInfo['email'] = $senderEmail;
+        							$senderInfo['name'] = $senderName;
         							$this->inlineTranslation->suspend();
         							$_transportBuilder = $this->_transportBuilder;
         							$_transportBuilder->clearFrom();
