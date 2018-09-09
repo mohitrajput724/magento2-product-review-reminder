@@ -12,7 +12,10 @@ class ListMode implements \Magento\Framework\Option\ArrayInterface
     ['value' => '4', 'label' => __('4')],
     ['value' => '5', 'label' => __('5')],
     ['value' => '6', 'label' => __('6')],
-    ['value' => '7', 'label' => __('7')]
+    ['value' => '7', 'label' => __('7')],
+	['value' => '14', 'label' => __('14')],
+	['value' => '14', 'label' => __('30')],
+	
   ];
  }
 }

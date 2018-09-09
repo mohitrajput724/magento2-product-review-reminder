@@ -36,6 +36,7 @@ class Index extends \Magento\Framework\App\Action\Action
 	
 	const XML_PATH_REMINDER_DAYS = 'review/general/reminder_days';
 	const XML_PATH_REMINDER_STATUS = 'review/general/enable';
+	const XML_PATH_REMINDER_TEMPLATE = 'review/general/review_template';
 
 	public function __construct(
 		\Magento\Framework\App\Action\Context $context,
@@ -77,10 +78,14 @@ class Index extends \Magento\Framework\App\Action\Action
 			$logger = new \Zend\Log\Logger();
 			$logger->addWriter($writer);
 			$x = $this->scopeConfig->getValue(self::XML_PATH_REMINDER_DAYS, $storeScope);			
-			$status = $this->scopeConfig->getValue(self::XML_PATH_REMINDER_STATUS, $storeScope);			
+			$status = $this->scopeConfig->getValue(self::XML_PATH_REMINDER_STATUS, $storeScope);
+			$template_id = $this->scopeConfig->getValue(
+                    self::XML_PATH_REMINDER_TEMPLATE,
+                    $storeScope
+                );
 		
 			if($status == 1){
-        			//$x = 0; //number of days in the past       
+        			$x = 0; //number of days in the past       
         			$past_stamp = time() - $x*24*60*60;
         
         			$past_date = date('Y-m-d', $past_stamp);
@@ -128,7 +133,7 @@ class Index extends \Magento\Framework\App\Action\Action
         							$_transportBuilder->clearMessageId();
         							$_transportBuilder->clearBody();
         							$_transportBuilder->clearRecipients();	
-        							$_transportBuilder  =  $this->_transportBuilder->setTemplateIdentifier(1)
+        							$_transportBuilder  =  $this->_transportBuilder->setTemplateIdentifier($template_id)
         							->setTemplateOptions(
         								[
         									'area' => \Magento\Framework\App\Area::AREA_FRONTEND, 

@@ -20,6 +20,11 @@
                     <label>Set Email Reminder Days after Shipping</label>
                     <source_model>Review\Reminder\Model\Config\Source\ListMode</source_model> 
                 </field>
+                <field id="review_template" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Email Template</label>
+                    <comment>Select email template for review reminder</comment>
+                    <source_model>Review\Reminder\Model\Config\Template</source_model>
+                </field>
 			 </group>
            
         </section>
